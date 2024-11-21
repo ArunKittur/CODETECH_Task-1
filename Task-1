@@ -1,0 +1,70 @@
+/*Create a Java program that acts as a basic calculator. It should prompt the user to
+enter two numbers and choose an operation (addition, subtraction, multiplication,
+division). Then, it should perform the selected operation and display the result to the
+user.*/
+
+package Task_1;
+import java.util.Scanner;
+public class Simple_Cal 
+{
+public static void main(String[] args) 
+{
+Scanner sc=new Scanner(System.in);	
+
+while(true)
+{
+System.out.println("Enter the first number");
+double n1=sc.nextDouble();
+
+System.out.println("Enter the second number");
+double n2=sc.nextDouble();
+
+System.out.println("Choose an operation");
+
+System.out.println("1. Addition (+)");
+System.out.println("2. Subtraction (-)");
+System.out.println("3. Multiplication (*)");
+System.out.println("4. Division (/)");
+System.out.println("5. Exit");
+
+System.out.println("Enter the number corresponding to your choice: ");
+int choice=sc.nextInt();
+
+double result=0;
+
+switch (choice) 
+{
+
+case 1: 
+	result=n1+n2;
+	System.out.println("The result of Addition is: "+result);
+	break;
+	
+case 2:
+	result=n1-n2;
+	System.out.println("The result of Suntraction is: "+result);
+	break;
+	
+case 3: 
+	result =n1*n2;
+	System.out.println("The result of Multiplication is: "+result);
+	break;
+	
+case 4:
+	if(n2==0)
+	{
+		System.out.println("Error: Can't divide by zero.");
+	}
+	else
+	{
+	result =n1/n2;
+	System.out.println("The result of Division is: "+result);
+	}
+	break;
+	
+default:
+	System.out.println("Invalid choice. Please choose a valid operation.");
+}
+}
+}
+}
